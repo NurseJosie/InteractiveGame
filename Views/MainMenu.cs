@@ -3,7 +3,7 @@ using InteractiveProject;
 
 public class MainMenu
 {
-    public void RunMenu(Level_1 level1, User user, MessageHelper messageHepler, Level_2 level2, MainMenu mainMenu, Level_3 level3)
+    public void RunMenu(LevelOne level1, User user, MessageHelper messageHepler, LevelTwo level2, MainMenu mainMenu, LevelThree level3)
     {
         bool runMenu = true;
         while (runMenu)

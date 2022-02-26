@@ -1,12 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-//User user = new();
-//Level_1 level1 = new();
-//MainMenu mainMenu = new();
-//MessageHelper messageHelper = new();
-//Level_2 level2 = new();
-//Level_3 level3 = new();
+using Interactive_Saga;
+using InteractiveProject;
 
-//messageHelper.WelcomeMessage(user);
+User user = new();
+LevelOne level1 = new();
+MainMenu mainMenu = new();
+MessageHelper messageHelper = new();
+LevelTwo level2 = new();
+LevelThree level3 = new();
 
-//mainMenu.RunMenu(level1, user, messageHelper, level2, mainMenu, level3);
+messageHelper.WelcomeMessage(user);
+
+mainMenu.RunMenu(level1, user, messageHelper, level2, mainMenu, level3);
