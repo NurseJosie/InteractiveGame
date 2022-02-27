@@ -3,7 +3,7 @@ using InteractiveProject;
 
 public class MainMenu
 {
-    public void RunMenu(LevelOne level1, User user, MessageHelper messageHepler, LevelTwo level2, MainMenu mainMenu, LevelThree level3)
+    public void RunMenu(LevelOne level1, User user, MessageHelper messageHepler, MainMenu mainMenu, LevelTwo level2, LevelThree level3)
     {
         bool runMenu = true;
         while (runMenu)
@@ -19,7 +19,33 @@ public class MainMenu
             {
                 case 1:
                     Console.Clear();
-                    level1.RunLevelOne(user, level2, level3);
+                    bool levelResult = level1.RunLevelOne(user);
+                    if (!levelResult)
+                    {
+                        user.Key = 0;
+                        user.CorrectAnswers = 0;
+                        user.WrongAnswers = 0;
+                        user.Level = 1;
+                        break;
+                    }
+                    levelResult = level2.RunLevelTwo(user);
+                    if (!levelResult)
+                    {
+                        user.Key = 0;
+                        user.CorrectAnswers = 0;
+                        user.WrongAnswers = 0;
+                        user.Level = 1;
+                        break;
+                    }
+                    levelResult = level3.RunLevelThree(user);
+                    if (!levelResult)
+                    {
+                        user.Key = 0;
+                        user.CorrectAnswers = 0;
+                        user.WrongAnswers = 0;
+                        user.Level = 1;
+                        break;
+                    }
                     break;
 
                 case 2:
@@ -30,7 +56,6 @@ public class MainMenu
                 case 3:
                     Console.Clear();
                     messageHepler.RulesOfGame();
-                    mainMenu.RunMenu(level1, user, messageHepler, level2, mainMenu, level3);
                     break;
 
                 case 4:

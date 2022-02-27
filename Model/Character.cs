@@ -7,10 +7,6 @@
         public string Alternative { get; set; }
         public string CorrectAnswer { get; set; }
 
-        public Character()
-        {
-        }
-
         public Character(string helloPhrase, string question, string alternative, string correctAnswer)
         {
             HelloPhrase = helloPhrase;

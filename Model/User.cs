@@ -17,7 +17,7 @@
             Console.WriteLine("You have    " + Key + " keys");
             Console.WriteLine("Level:      " + Level + "/3");
             Console.WriteLine("******************************************************************************************");
-            Console.ReadKey();
+            Thread.Sleep(3000);
         }
     }
 }
